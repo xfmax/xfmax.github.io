@@ -7,19 +7,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="keywords" content="Android">
-  <meta name="description" content="在程序日益复杂庞大的今天，编写泛用性代码的价值愈发变得巨大。而要做到这一点，其诀窍仅只两字而已——解耦。最简单的解耦，无疑是使用基类替代子类。然而由于Java仅支持单继承，这种解耦方法所带来的局限性未免过大，有种“只准投胎一次”的感觉。使用接口替代具体类算是更进了一步，算是多给了一条命吧，但限制仍旧存在。要是我们所写的代码本身就是为了应用于“某种不确定的类型”呢？这时候就轮到泛型登场了。
-线程：操">
+  <meta name="description" content="线程：操作系统调度的最小单元，通过时间片轮转的方式调度线程。AsyncTask：线程池+Handler
+共有4个方法：
+1. onPreExecute
+2. doInBackground
+3. onProgressUpdate
+4. onPostExecute
+使用限制：
+1.必须在主线程中创建。
+2.execute方法必须在UI线程调用
+3.execute只能执行一次
+4.1.6之前串行，1.6">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android线程与线程池">
 <meta property="og:url" content="http://yoursite.com/2016/03/19/Android线程与线程池/index.html">
 <meta property="og:site_name" content="xfmax's blog">
-<meta property="og:description" content="在程序日益复杂庞大的今天，编写泛用性代码的价值愈发变得巨大。而要做到这一点，其诀窍仅只两字而已——解耦。最简单的解耦，无疑是使用基类替代子类。然而由于Java仅支持单继承，这种解耦方法所带来的局限性未免过大，有种“只准投胎一次”的感觉。使用接口替代具体类算是更进了一步，算是多给了一条命吧，但限制仍旧存在。要是我们所写的代码本身就是为了应用于“某种不确定的类型”呢？这时候就轮到泛型登场了。
-线程：操">
-<meta property="og:updated_time" content="2016-03-19T00:59:22.000Z">
+<meta property="og:description" content="线程：操作系统调度的最小单元，通过时间片轮转的方式调度线程。AsyncTask：线程池+Handler
+共有4个方法：
+1. onPreExecute
+2. doInBackground
+3. onProgressUpdate
+4. onPostExecute
+使用限制：
+1.必须在主线程中创建。
+2.execute方法必须在UI线程调用
+3.execute只能执行一次
+4.1.6之前串行，1.6">
+<meta property="og:updated_time" content="2016-03-19T01:00:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android线程与线程池">
-<meta name="twitter:description" content="在程序日益复杂庞大的今天，编写泛用性代码的价值愈发变得巨大。而要做到这一点，其诀窍仅只两字而已——解耦。最简单的解耦，无疑是使用基类替代子类。然而由于Java仅支持单继承，这种解耦方法所带来的局限性未免过大，有种“只准投胎一次”的感觉。使用接口替代具体类算是更进了一步，算是多给了一条命吧，但限制仍旧存在。要是我们所写的代码本身就是为了应用于“某种不确定的类型”呢？这时候就轮到泛型登场了。
-线程：操">
+<meta name="twitter:description" content="线程：操作系统调度的最小单元，通过时间片轮转的方式调度线程。AsyncTask：线程池+Handler
+共有4个方法：
+1. onPreExecute
+2. doInBackground
+3. onProgressUpdate
+4. onPostExecute
+使用限制：
+1.必须在主线程中创建。
+2.execute方法必须在UI线程调用
+3.execute只能执行一次
+4.1.6之前串行，1.6">
   
     <link rel="alternative" href="/atom.xml" title="xfmax&#39;s blog" type="application/atom+xml">
   
@@ -176,8 +203,7 @@
 
         <div class="post-main">
 
-            <div class="post-content" itemprop="postContent"><p>在程序日益复杂庞大的今天，编写泛用性代码的价值愈发变得巨大。<br>而要做到这一点，其诀窍仅只两字而已——解耦。<br>最简单的解耦，无疑是使用基类替代子类。然而由于Java仅支持单继承，这种解耦方法所带来的局限性未免过大，有种“只准投胎一次”的感觉。<br>使用接口替代具体类算是更进了一步，算是多给了一条命吧，但限制仍旧存在。要是我们所写的代码本身就是为了应用于“某种不确定的类型”呢？<br>这时候就轮到泛型登场了。</p>
-<h4 id="线程：操作系统调度的最小单元，通过时间片轮转的方式调度线程。"><a href="#线程：操作系统调度的最小单元，通过时间片轮转的方式调度线程。" class="headerlink" title="线程：操作系统调度的最小单元，通过时间片轮转的方式调度线程。"></a>线程：操作系统调度的最小单元，通过时间片轮转的方式调度线程。</h4><p><strong>AsyncTask</strong>：线程池+Handler</p>
+            <div class="post-content" itemprop="postContent"><h4 id="线程：操作系统调度的最小单元，通过时间片轮转的方式调度线程。"><a href="#线程：操作系统调度的最小单元，通过时间片轮转的方式调度线程。" class="headerlink" title="线程：操作系统调度的最小单元，通过时间片轮转的方式调度线程。"></a>线程：操作系统调度的最小单元，通过时间片轮转的方式调度线程。</h4><p><strong>AsyncTask</strong>：线程池+Handler</p>
 <p>共有4个方法：</p>
 <pre><code>1. onPreExecute
 2. doInBackground
