@@ -3,19 +3,53 @@
 <head>
   <meta charset="utf-8">
   
-  <title>xfmax&#39;s blog | If you don&#39;t want to change,you will die.</title>
+  <title>Android线程与线程池 | xfmax&#39;s blog | If you don&#39;t want to change,you will die.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="undefined">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="xfmax's blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="keywords" content="">
+  <meta name="description" content="###线程：操作系统调度的最小单元，通过时间片轮转的方式调度线程。
+AsyncTask：线程池+Handler
+共有4个方法：
+1. onPreExecute
+2. doInBackground
+3. onProgressUpdate
+4. onPostExecute
+使用限制：
+1.必须在主线程中创建。
+2.execute方法必须在UI线程调用
+3.execute只能执行一次
+4.1.6之前串行">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android线程与线程池">
+<meta property="og:url" content="http://yoursite.com/2016/03/19/Android线程与线程池/index.html">
 <meta property="og:site_name" content="xfmax's blog">
-<meta property="og:description">
+<meta property="og:description" content="###线程：操作系统调度的最小单元，通过时间片轮转的方式调度线程。
+AsyncTask：线程池+Handler
+共有4个方法：
+1. onPreExecute
+2. doInBackground
+3. onProgressUpdate
+4. onPostExecute
+使用限制：
+1.必须在主线程中创建。
+2.execute方法必须在UI线程调用
+3.execute只能执行一次
+4.1.6之前串行">
+<meta property="og:updated_time" content="2016-03-19T00:09:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="xfmax's blog">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Android线程与线程池">
+<meta name="twitter:description" content="###线程：操作系统调度的最小单元，通过时间片轮转的方式调度线程。
+AsyncTask：线程池+Handler
+共有4个方法：
+1. onPreExecute
+2. doInBackground
+3. onProgressUpdate
+4. onPostExecute
+使用限制：
+1.必须在主线程中创建。
+2.execute方法必须在UI线程调用
+3.execute只能执行一次
+4.1.6之前串行">
   
     <link rel="alternative" href="/atom.xml" title="xfmax&#39;s blog" type="application/atom+xml">
   
@@ -26,7 +60,7 @@
 <body>
   <div id="loading" class="active"></div>
 
-  <nav id="menu"  >
+  <nav id="menu" class="hide" >
    <div class="inner">
   <a href="javascript:;" class="header-icon waves-circle-light" id="menu-off">
       <i class="icon icon-lg icon-close"></i>
@@ -42,7 +76,7 @@
   </div>
   <ul class="nav">
     
-        <li class="waves-block active">
+        <li class="waves-block">
           <a href="/"  >
             <i class="icon icon-lg icon-home"></i>
             Home
@@ -96,7 +130,7 @@
         <a href="javascript:;" class="header-icon waves-circle-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">xfmax&#39;s blog</div>
+        <div class="flex-col header-title ellipsis">Android线程与线程池</div>
         
         <a href="javascript:;" class="header-icon waves-circle-light" id="menu-share">
             <i class="icon icon-lg icon-share-alt"></i>
@@ -106,38 +140,71 @@
 </header>
 <header class="content-header">
   <div class="container">
-    <h1 class="author">xfmax&#39;s blog</h1>
-    <h5 class="subtitle">If you don&#39;t want to change,you will die.</h5>
+    <h1 class="author">Android线程与线程池</h1>
+    <h5 class="subtitle">2016-03-19</h5>
   </div>
 </header>
 
     <div class="container body-wrap">
       
-  <ul class="post-list">
-  
-    <li class="post-list-item">
   <article id="post-Android线程与线程池" class="article article-type-post" itemscope itemprop="blogPost">
     
-      
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2016/03/19/Android线程与线程池/">Android线程与线程池</a>
-    </h3>
-  
-
-
-
       <div class="post-meat flex-row">
         <div class="flex-col"></div>
-        <time datetime="2016-03-18T23:58:15.000Z" itemprop="datePublished" class="post-tiem">
-  2016-03-19
-</time>
       </div>
-      <div class="post-content" itemprop="postContent" >
-        
-          <p>###线程：操作系统调度的最小单元，通过时间片轮转的方式调度线程。</p>
+      <div class="post-body">
+
+        <aside class="post-widget" id="post-widget">
+
+          
+          <div class="post-share" id="post-share" data-title="Android线程与线程池" data-pic="/img/logo.jpg" data-summary="null" data-url="http://yoursite.com/2016/03/19/Android线程与线程池/index.html">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+          
+
+          
+          <nav class="post-toc-wrap" id="post-toc">
+            
+          </nav>
+          
+        </aside>
+
+        <div class="post-main">
+
+            <div class="post-content" itemprop="postContent"><p>###线程：操作系统调度的最小单元，通过时间片轮转的方式调度线程。</p>
 <p><strong>AsyncTask</strong>：线程池+Handler</p>
 <p>共有4个方法：</p>
 <pre><code>1. onPreExecute
@@ -157,57 +224,58 @@
 2. CachedThreadPool：线程数不定的线程池，只有非核心线程，最大线程数为Integer.MAX_VALUE。    【注：】适合执行大量的耗时较少的程序。
 3. ScheduledThreadPool：核心线程数量固定，非核心线程数量无限制，非核心线程会被立即收回。
 4. SingleThreadExecutor：只有一个核心线程。
-</code></pre>
-        
+</code></pre></div>
+
+            
+<nav class="post-nav flex-row">
+  <div class="flex-col waves-block prev">
+    
+  </div>
+  <div class="flex-col waves-block next">
+    
+      <a href="/2016/03/15/开篇/" title="开篇" id="post-next" class="post-nav-link">
+        <span class="article-nav-title">下一篇</span>
+        <i class="icon icon-chevron-right"></i>
+      </a>
+    
+  </div>
+
+</nav>
+
+
+
+            
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Android线程与线程池" data-title="Android线程与线程池" data-url="http://yoursite.com/2016/03/19/Android线程与线程池/index.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"ysblog"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+
+        </div>
+
       </div>
-      <div class="post-footer clearfix">
-        <a href="/2016/03/19/Android线程与线程池/" class="post-more waves-button-light">MORE</a>
-      </div>
+
     
 
   </article>
-
-
-</li>
-  
-    <li class="post-list-item">
-  <article id="post-开篇" class="article article-type-post" itemscope itemprop="blogPost">
-    
-      
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2016/03/15/开篇/">开篇</a>
-    </h3>
-  
-
-
-
-      <div class="post-meat flex-row">
-        <div class="flex-col"></div>
-        <time datetime="2016-03-15T14:36:25.000Z" itemprop="datePublished" class="post-tiem">
-  2016-03-15
-</time>
-      </div>
-      <div class="post-content" itemprop="postContent" >
-        
-          <p>作为第一篇博客，我想谈一谈学习的技巧。<br>我从小到大始终不相信有所谓的天才，也许我周围的环境没有遇到这样的人。可我始终相信那些优秀的人，都有自己的一套学习方法或者说技巧。</p>
-
-        
-      </div>
-      <div class="post-footer clearfix">
-        <a href="/2016/03/15/开篇/" class="post-more waves-button-light">MORE</a>
-      </div>
-    
-
-  </article>
-
-
-</li>
-  
-  </ul>
-  
 
 
 
@@ -216,7 +284,7 @@
 <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-circle-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
-<div class="global-share" id="global-share" data-title="xfmax&#39;s blog" data-pic="/img/logo.jpg" data-summary="null" data-url="http://yoursite.com/index.html">
+<div class="global-share" id="global-share" data-title="Android线程与线程池" data-pic="/img/logo.jpg" data-summary="null" data-url="http://yoursite.com/2016/03/19/Android线程与线程池/index.html">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
