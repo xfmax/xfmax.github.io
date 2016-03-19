@@ -139,8 +139,7 @@
       </div>
       <div class="post-content" itemprop="postContent" >
         
-          <p>###线程：操作系统调度的最小单元，通过时间片轮转的方式调度线程。</p>
-<p><strong>AsyncTask</strong>：线程池+Handler</p>
+          <h3 id="线程：操作系统调度的最小单元，通过时间片轮转的方式调度线程。"><a href="#线程：操作系统调度的最小单元，通过时间片轮转的方式调度线程。" class="headerlink" title="线程：操作系统调度的最小单元，通过时间片轮转的方式调度线程。"></a>线程：操作系统调度的最小单元，通过时间片轮转的方式调度线程。</h3><p><strong>AsyncTask</strong>：线程池+Handler</p>
 <p>共有4个方法：</p>
 <pre><code>1. onPreExecute
 2. doInBackground
@@ -154,8 +153,7 @@
 </code></pre><p><strong>HandlerThread</strong>：线程+Handler</p>
 <p>是什么：一个Thread，在run( )方法里开启一个无限的消息循环。</p>
 <p><strong>IntentService</strong>：HandlerThread（短时后台任务，后台执行完自动退出）</p>
-<p>####ThreadPoolExecutor分类:</p>
-<pre><code>1. FixedThreadPool：固定数量的线程，只有核心线程（不会被系统回收）。
+<h4 id="ThreadPoolExecutor分类"><a href="#ThreadPoolExecutor分类" class="headerlink" title="ThreadPoolExecutor分类:"></a>ThreadPoolExecutor分类:</h4><pre><code>1. FixedThreadPool：固定数量的线程，只有核心线程（不会被系统回收）。
 2. CachedThreadPool：线程数不定的线程池，只有非核心线程，最大线程数为Integer.MAX_VALUE。    【注：】适合执行大量的耗时较少的程序。
 3. ScheduledThreadPool：核心线程数量固定，非核心线程数量无限制，非核心线程会被立即收回。
 4. SingleThreadExecutor：只有一个核心线程。
