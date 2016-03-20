@@ -13,7 +13,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/03/19/Android线程与线程池/index.html">
 <meta property="og:site_name" content="base">
 <meta property="og:description" content="线程：操作系统调度的最小单元，通过时间片轮转的方式调度线程">
-<meta property="og:updated_time" content="2016-03-20T13:20:37.000Z">
+<meta property="og:updated_time" content="2016-03-20T13:22:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android线程与线程池">
 <meta name="twitter:description" content="线程：操作系统调度的最小单元，通过时间片轮转的方式调度线程">
@@ -187,12 +187,12 @@
 <p>是什么：一个Thread，在run( )方法里开启一个无限的消息循环。</p>
 <p><strong>IntentService</strong>：HandlerThread（短时后台任务，后台执行完自动退出）</p>
 <p><strong>ThreadPoolExecutor分类</strong>:</p>
-<p>线程数不定：</p>
+<p>线程数固定：</p>
 <ul>
 <li>FixedThreadPool：固定数量的线程，只有核心线程（不会被系统回收）。</li>
 <li>CachedThreadPool：线程数不定的线程池，只有非核心线程，最大线程数为Integer.MAX_VALUE。【注】:适合执行大量的耗时较少的程序。</li>
 </ul>
-<p>线程数固定：</p>
+<p>线程数不定：</p>
 <ul>
 <li>ScheduledThreadPool：核心线程数量固定，非核心线程数量无限制，非核心线程会被立即收回。</li>
 <li>SingleThreadExecutor：只有一个核心线程。</li>
