@@ -154,7 +154,7 @@
 <p><strong>IntentService</strong>：HandlerThread（短时后台任务，后台执行完自动退出）</p>
 <p><strong>ThreadPoolExecutor分类</strong>:</p>
 <pre><code>1. FixedThreadPool：固定数量的线程，只有核心线程（不会被系统回收）。
-2. CachedThreadPool：线程数不定的线程池，只有非核心线程，最大线程数为Integer.MAX_VALUE。    【注：】适合执行大量的耗时较少的程序。
+2. CachedThreadPool：线程数不定的线程池，只有非核心线程，最大线程数为Integer.MAX_VALUE。    【注】:适合执行大量的耗时较少的程序。
 3. ScheduledThreadPool：核心线程数量固定，非核心线程数量无限制，非核心线程会被立即收回。
 4. SingleThreadExecutor：只有一个核心线程。
 </code></pre>
