@@ -153,17 +153,11 @@
 <p>是什么：一个Thread，在run( )方法里开启一个无限的消息循环。</p>
 <p><strong>IntentService</strong>：HandlerThread（短时后台任务，后台执行完自动退出）</p>
 <p><strong>ThreadPoolExecutor分类</strong>:</p>
-<p>线程数固定：</p>
-<ul>
-<li>FixedThreadPool：固定数量的线程，只有核心线程（不会被系统回收）。</li>
-<li>CachedThreadPool：线程数不定的线程池，只有非核心线程，最大线程数为Integer.MAX_VALUE。【注】:适合执行大量的耗时较少的程序。</li>
-</ul>
-<p>线程数不定：</p>
-<ul>
-<li>ScheduledThreadPool：核心线程数量固定，非核心线程数量无限制，非核心线程会被立即收回。</li>
-<li>SingleThreadExecutor：只有一个核心线程。</li>
-</ul>
-
+<pre><code>* FixedThreadPool：固定数量的线程，只有核心线程（不会被系统回收）。
+* CachedThreadPool：线程数不定的线程池，只有非核心线程，最大线程数为Integer.MAX_VALUE。    【注】:适合执行大量的耗时较少的程序。
+* ScheduledThreadPool：核心线程数量固定，非核心线程数量无限制，非核心线程会被立即收回。
+* SingleThreadExecutor：只有一个核心线程。
+</code></pre>
         
       </div>
       <div class="post-footer clearfix">
