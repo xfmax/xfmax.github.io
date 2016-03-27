@@ -7,23 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="keywords" content="Binder">
-  <meta name="description" content="以下是用addBook方法作为一个例子，说明流程：
-1.Activity中的bindService，注册Service，返回值在ServiceConnection的connected中，使用asInterface（binder）得到iBookManager（服务器和客户端在同一个进程，直接返回binder，不在同一进程，返回proxy）
-2.Service中定义一个Stub，里面重写addBoo">
+  <meta name="description">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AndroidIPC机制Binder">
 <meta property="og:url" content="http://yoursite.com/2016/03/27/AndroidIPC机制Binder/index.html">
 <meta property="og:site_name" content="base">
-<meta property="og:description" content="以下是用addBook方法作为一个例子，说明流程：
-1.Activity中的bindService，注册Service，返回值在ServiceConnection的connected中，使用asInterface（binder）得到iBookManager（服务器和客户端在同一个进程，直接返回binder，不在同一进程，返回proxy）
-2.Service中定义一个Stub，里面重写addBoo">
+<meta property="og:description">
 <meta property="og:image" content="https://github.com/xfmax/xfmax.github.io/raw/master/images/binder.png">
-<meta property="og:updated_time" content="2016-03-27T12:44:39.000Z">
+<meta property="og:updated_time" content="2016-03-27T12:58:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AndroidIPC机制Binder">
-<meta name="twitter:description" content="以下是用addBook方法作为一个例子，说明流程：
-1.Activity中的bindService，注册Service，返回值在ServiceConnection的connected中，使用asInterface（binder）得到iBookManager（服务器和客户端在同一个进程，直接返回binder，不在同一进程，返回proxy）
-2.Service中定义一个Stub，里面重写addBoo">
+<meta name="twitter:description">
 <meta name="twitter:image" content="https://github.com/xfmax/xfmax.github.io/raw/master/images/binder.png">
   
   <link rel="shortcut icon" href="/favicon.ico">
@@ -132,7 +126,7 @@
         <aside class="post-widget" id="post-widget">
 
           
-          <div class="post-share" id="post-share" data-title="AndroidIPC机制Binder" data-pic="/img/logo.jpg" data-summary="null" data-url="http://yoursite.com/2016/03/27/AndroidIPC机制Binder/index.html">
+          <div class="post-share" id="post-share" data-title="AndroidIPC机制Binder" data-pic="/img/logo.jpg" data-summary="&lt;p&gt;&lt;img src=&quot;https://github.com/xfmax/xfmax.github.io/raw/master/images/binder.png&quot; alt=&quot;binder&quot;&gt;&lt;/p&gt;" data-url="http://yoursite.com/2016/03/27/AndroidIPC机制Binder/index.html">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
@@ -180,6 +174,7 @@
         <div class="post-main">
 
             <div class="post-content" itemprop="postContent"><p><img src="https://github.com/xfmax/xfmax.github.io/raw/master/images/binder.png" alt="binder"></p>
+<a id="more"></a>
 <p>以下是用addBook方法作为一个例子，说明流程：</p>
 <p>1.Activity中的bindService，注册Service，返回值在ServiceConnection的connected中，使用asInterface（binder）得到iBookManager（服务器和客户端在同一个进程，直接返回binder，不在同一进程，返回proxy）</p>
 <p>2.Service中定义一个Stub，里面重写addBook方法，在onbind方法里返回这个Stub。</p>
@@ -226,7 +221,7 @@
 <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-circle-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
-<div class="global-share" id="global-share" data-title="AndroidIPC机制Binder" data-pic="/img/logo.jpg" data-summary="null" data-url="http://yoursite.com/2016/03/27/AndroidIPC机制Binder/index.html">
+<div class="global-share" id="global-share" data-title="AndroidIPC机制Binder" data-pic="/img/logo.jpg" data-summary="&lt;p&gt;&lt;img src=&quot;https://github.com/xfmax/xfmax.github.io/raw/master/images/binder.png&quot; alt=&quot;binder&quot;&gt;&lt;/p&gt;" data-url="http://yoursite.com/2016/03/27/AndroidIPC机制Binder/index.html">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>

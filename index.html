@@ -138,13 +138,6 @@
       <div class="post-content" itemprop="postContent" >
         
           <p><img src="https://github.com/xfmax/xfmax.github.io/raw/master/images/binder.png" alt="binder"></p>
-<p>以下是用addBook方法作为一个例子，说明流程：</p>
-<p>1.Activity中的bindService，注册Service，返回值在ServiceConnection的connected中，使用asInterface（binder）得到iBookManager（服务器和客户端在同一个进程，直接返回binder，不在同一进程，返回proxy）</p>
-<p>2.Service中定义一个Stub，里面重写addBook方法，在onbind方法里返回这个Stub。</p>
-<p>3.调用Activity中的iBookManager.addBook。</p>
-<p>4.IBookManager中的Stub中的proxy中的addBook方法被调用，紧接着transact被调用，再然后会调用Server端的Stub中的onTransact方法（一般不会重写该方法，所以是在调用IBookManager中的onTransact方法）。</p>
-<p>5.调用Service中的addBook方法。</p>
-
         
       </div>
       <div class="post-footer clearfix">
