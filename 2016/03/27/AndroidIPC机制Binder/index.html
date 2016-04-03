@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="base">
 <meta property="og:description">
 <meta property="og:image" content="https://github.com/xfmax/xfmax.github.io/raw/master/images/binder.png">
-<meta property="og:updated_time" content="2016-03-27T13:14:54.000Z">
+<meta property="og:updated_time" content="2016-04-03T03:27:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AndroidIPC机制Binder">
 <meta name="twitter:description">
@@ -186,8 +186,7 @@
 <p>1.Activity中的bindService，注册Service，返回值在ServiceConnection的connected中，使用asInterface（binder）得到iBookManager（服务器和客户端在同一个进程，直接返回binder，不在同一进程，返回proxy）</p>
 <p>2.Service中定义一个Stub，里面重写addBook方法，在onbind方法里返回这个Stub。</p>
 <p>3.调用Activity中的iBookManager.addBook。</p>
-<p>4.IBookManager中的Stub中的proxy中的addBook方法被调用，紧接着transact被调用，再然后会调用Server端的Stub中的onTransact方法（一般不会重写该方法，所以是在调用父类IBookManager中的onTransact方法）。</p>
-<p>5.调用Service中的addBook方法—–&gt;3。</p>
+<p>4.IBookManager中的Stub中的proxy中的addBook方法被调用，紧接着transact被调用，再然后会调用Server端的Stub中的onTransact方法（一般不会重写该方法，所以是在调用父类IBookManager中的onTransact方法），最后会由底层调用server端的Stub中的addBook方法。</p>
 </div>
 
             
