@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>65k methods limit | base | If you don&#39;t want to change,you will die.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="Android开发">
+  <meta name="description" content="Dalvik 65K methods limit你很快就会遇到的，不过放心，multidexing
+会帮助你。什么是Dalvik 65K methods limit？我们知道，我们写完java code之后，dx tool会把java编译的class文件再编译成Dalivik虚拟机能识别的DEX文件，这个文件里最多能够索引65536个method。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="65k methods limit">
+<meta property="og:url" content="http://yoursite.com/2016/04/05/65k-methods-limit/index.html">
+<meta property="og:site_name" content="base">
+<meta property="og:description" content="Dalvik 65K methods limit你很快就会遇到的，不过放心，multidexing
+会帮助你。什么是Dalvik 65K methods limit？我们知道，我们写完java code之后，dx tool会把java编译的class文件再编译成Dalivik虚拟机能识别的DEX文件，这个文件里最多能够索引65536个method。">
+<meta property="og:updated_time" content="2016-04-05T03:30:05.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="65k methods limit">
+<meta name="twitter:description" content="Dalvik 65K methods limit你很快就会遇到的，不过放心，multidexing
+会帮助你。什么是Dalvik 65K methods limit？我们知道，我们写完java code之后，dx tool会把java编译的class文件再编译成Dalivik虚拟机能识别的DEX文件，这个文件里最多能够索引65536个method。">
+  
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="loading" class="active"></div>
+
+  <nav id="menu" class="hide" >
+   <div class="inner">
+  <a href="javascript:;" class="header-icon waves-circle-light" id="menu-off">
+      <i class="icon icon-lg icon-close"></i>
+  </a>
+  <div class="brand-wrap">
+    <div class="brand">
+      <a href="./" class="avatar"><img src="/img/logo.jpg"></a>
+      <hgroup class="introduce">
+        <h5 class="nickname">base</h5>
+        <a href="mailto:undefined" title="xufengbase@gmail.com" class="mail">xufengbase@gmail.com</a>
+      </hgroup>
+    </div>
+  </div>
+  <ul class="nav">
+    
+        <li class="waves-block">
+          <a href="/"  >
+            <i class="icon icon-lg icon-home"></i>
+            Home
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="/archives"  >
+            <i class="icon icon-lg icon-archives"></i>
+            Archives
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="/tags"  >
+            <i class="icon icon-lg icon-tags"></i>
+            Tags
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="https://github.com/xfmax" target="_blank" >
+            <i class="icon icon-lg icon-github"></i>
+            Github
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="http://weibo.com/2587808945/" target="_blank" >
+            <i class="icon icon-lg icon-weibo"></i>
+            Weibo
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="http://www.jianshu.com/users/1a8ad7d1cab8/latest_articles"  >
+            <i class="icon icon-lg icon-link"></i>
+            简书
+          </a>
+        </li>
+    
+  </ul>
+
+  <footer class="footer">
+  <p><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAD///+rsapERER3d3eIiIjMzMzu7u4iIiKUmZO6v7rKzsoODg4RERFVVVUNDQ0NDg0PEA8zMzNLTEtbXltmZmZydnF9gn2AgICPkI+ZmZmqqqq7u7vFxsXIzMgNDQwZGRkgICAhISEkJSMnKCcuMC4xMzE5Ozk7PTtBQkFCQkJDQ0Nna2eGhoaHh4ezuLLGysbd3d1wVGpAAAAA4UlEQVR42q2T1xqCMAyFk7QsBQeKA9x7j/d/OSm22CpX0nzcpA1/T05aAOuBVkMAScQFHLnEwoCo2f1TnQIGoVMewjZEjVFN4GH1Ue1Cn2jWqwfsOOj6wDwGvotsl/c8lv7KIq1eLOsT0HMFHMIE/RZyHnlphryT9zyV+8WH5e8yQw3wnQvgAFxPTKUVi555SHR/lOfLMgVTeDlSfN+TaoUsiTyeIm+bCkHvCA2FUKG48LDtYBZBknsYP/G8NTw0gaaHyuQf4H5pecrB/FYCT2sL9zAfy1Xyjou6L8X2W7YcLyBZCRtnq/zfAAAAAElFTkSuQmCC" /></a></p>
+  <p>base &copy; 2016</p>
+  <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+  <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
+  <a href="undefined" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
+</footer>
+
+</div>
+
+  </nav>
+  <main id="main">
+    <header class="header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-circle-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">65k methods limit</div>
+        
+        <a href="javascript:;" class="header-icon waves-circle-light" id="menu-share">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header">
+  <div class="container">
+    <h1 class="author">65k methods limit</h1>
+    <h5 class="subtitle">2016-04-05</h5>
+  </div>
+</header>
+
+    <div class="container body-wrap">
+      
+  <article id="post-65k-methods-limit" class="article article-type-post" itemscope itemprop="blogPost">
+    
+      <div class="post-meat flex-row">
+        <div class="flex-col">
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android开发/">Android开发</a></li></ul>
+</div>
+      </div>
+      <div class="post-body">
+
+        <aside class="post-widget" id="post-widget">
+
+          
+          <div class="post-share" id="post-share" data-title="65k methods limit" data-pic="/img/logo.jpg" data-summary="&lt;p&gt;Dalvik 65K methods limit&lt;br&gt;你很快就会遇到的，不过放心，&lt;a href=&quot;https://medium.com/@rotxed/dex-skys-the-limit-no-65k-methods-is-28e6cb40cf71&quot;&gt;multidexing
+&lt;/a&gt;会帮助你。&lt;br&gt;什么是Dalvik 65K methods limit？我们知道，我们写完java code之后，dx tool会把java编译的class文件再编译成Dalivik虚拟机能识别的DEX文件，这个文件里最多能够索引65536个method。&lt;br&gt;" data-url="http://yoursite.com/2016/04/05/65k-methods-limit/index.html">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+          
+
+          
+          <nav class="post-toc-wrap" id="post-toc">
+            
+          </nav>
+          
+        </aside>
+
+        <div class="post-main">
+
+            <div class="post-content" itemprop="postContent"><p>Dalvik 65K methods limit<br>你很快就会遇到的，不过放心，<a href="https://medium.com/@rotxed/dex-skys-the-limit-no-65k-methods-is-28e6cb40cf71" target="_blank" rel="external">multidexing
+</a>会帮助你。<br>什么是Dalvik 65K methods limit？我们知道，我们写完java code之后，dx tool会把java编译的class文件再编译成Dalivik虚拟机能识别的DEX文件，这个文件里最多能够索引65536个method。<br><a id="more"></a><br>关于这个有两点要注意：</p>
+<ol>
+<li>这些method是指能够索引(reference)到的，而不是定义(define)的。或者说，如果你定义了一个方法，但这个方法并没有被调用，那么就不算在内。</li>
+<li>这些method不仅仅是开发人员自己写的，还包括所有第三方library里面的method。</li>
+</ol>
+<p>索引是用一个链表结构存储的，类型是short，short占2字节，16位，2^16=65536，所以，我们总共可以索引65536<br>个方法，包括自己写的和引入第三方库里的。<br>那么，我们如何能快速知道我们的app里已经有多少个method了呢？</p>
+<ul>
+<li>bash script: <a href="https://github.com/mihaip/dex-method-counts" target="_blank" rel="external">dex-method-counts</a>。这个工具可以快速计算，并且提供一个清晰的视图来阅读。</li>
+<li><a href="https://gist.github.com/JakeWharton/6002797" target="_blank" rel="external">dex.sh</a> by Jake Wharton。这个工具由于采用了递归算法，所以耗时比较长。(Jake大神还写了一篇有趣的分析文章<a href="http://jakewharton.com/play-services-is-a-monolith/" target="_blank" rel="external">Play Services 5.0 Is A Monolith Abomination</a>，针对Play Services 5.0太大的问题进行了分析，有空时我再翻译下给各位。虽然<a href="http://android-developers.blogspot.it/2014/12/google-play-services-and-dex-method.html" target="_blank" rel="external">Play Services 6.5已经模块化，更加轻量级了</a>）。</li>
+</ul>
+<p>现在，既然我们已经知道了自家app里的method数了，那么如何来处理这种情况呢？（官方做法、减少方法数、分包、插件化、增大可容纳的方法数）</p>
+<ul>
+<li><a href="http://developer.android.com/tools/building/multidex.html" target="_blank" rel="external">Multidex</a>，官方提供的解决方案（这个jar包最低可以支持到<strong>API 4</strong>的版本，5.0及以上版本默认支持），<a href="http://blog.osom.info/2014/10/multi-dex-to-rescue-from-infamous-65536.html" target="_blank" rel="external">这篇文章</a>里有详细的使用方法，此不赘述（使用Multidex support library）原理：将Multidex作为基本的dex，用它再去管理其他的dex。</li>
+<li><a href="http://developer.android.com/tools/help/proguard.html" target="_blank" rel="external">ProGuard</a>ProGuard<br>可以把code里unnecessary的method移除，压缩apk，当然还有代码混淆<br>的奇效。</li>
+<li>使用H5文件代替一部分的逻辑代码。</li>
+<li>再创建一个DEX File<br>。把app里可以独立的模块或code提取出来，放到一个独立的dex文件里，你可以使用<a href="http://android-developers.blogspot.it/2011/07/custom-class-loading-in-dalvik.html" target="_blank" rel="external">Custom ClassLoader</a>来加载这些类，然后使用接口<br>或反射<br>来调用这些方法。不过，这个过程还是比较麻烦的。</li>
+<li>插件化： <a href="https://github.com/singwhatiwanna/dynamic-load-apk" target="_blank" rel="external">https://github.com/singwhatiwanna/dynamic-load-apk</a> </li>
+<li>如果使用eclipse，可以在Project.proterty中配置一句话就Ok啦， dex.force.jumbo=true,应该是暂时增大可容纳的方法数，也就是说方法在增大，还是会遇到问题，具体不是很了解，请各位大神指教！</li>
+</ul>
+</div>
+
+            
+<nav class="post-nav flex-row">
+  <div class="flex-col waves-block prev">
+    
+  </div>
+  <div class="flex-col waves-block next">
+    
+      <a href="/2016/03/27/AndroidIPC机制Binder/" title="AndroidIPC机制Binder" id="post-next" class="post-nav-link">
+        <span class="article-nav-title">下一篇</span>
+        <i class="icon icon-chevron-right"></i>
+      </a>
+    
+  </div>
+
+</nav>
+
+
+
+            
+
+
+
+
+        </div>
+
+      </div>
+
+    
+
+  </article>
+
+
+
+    </div>
+  </main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-circle-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+<div class="global-share" id="global-share" data-title="65k methods limit" data-pic="/img/logo.jpg" data-summary="&lt;p&gt;Dalvik 65K methods limit&lt;br&gt;你很快就会遇到的，不过放心，&lt;a href=&quot;https://medium.com/@rotxed/dex-skys-the-limit-no-65k-methods-is-28e6cb40cf71&quot;&gt;multidexing
+&lt;/a&gt;会帮助你。&lt;br&gt;什么是Dalvik 65K methods limit？我们知道，我们写完java code之后，dx tool会把java编译的class文件再编译成Dalivik虚拟机能识别的DEX文件，这个文件里最多能够索引65536个method。&lt;br&gt;" data-url="http://yoursite.com/2016/04/05/65k-methods-limit/index.html">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
