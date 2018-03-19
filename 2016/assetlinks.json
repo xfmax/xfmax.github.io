@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.yongche",
+    "sha256_cert_fingerprints":
+    ["18:05:FD:9D:8B:76:C1:D6:BA:D3:73:88:DD:3E:13:4F:F6:0E:64:B0:11:25:71:CA:42:CE:C9:EA:9F:1F:F9:28"]
+  }
+}]
